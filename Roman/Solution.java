@@ -4,7 +4,7 @@ class Solution {
     
     /*
     My name: Bao Tran
-    Partner's Name: Rayna, 1918 (Discord Username)
+    Partner's Name: Rayna, Sharif
      */
 
     public String intToRoman(int num) {

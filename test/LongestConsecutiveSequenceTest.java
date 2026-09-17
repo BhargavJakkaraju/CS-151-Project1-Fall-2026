@@ -1,23 +1,28 @@
 package test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 import sequence.LongestConsecutiveSequence;
 
 public class LongestConsecutiveSequenceTest {
-    private static class Test {
-        static void run() {
-            LongestConsecutiveSequence solution = new LongestConsecutiveSequence();
-
-            // Min Myat Thu's tests
-            System.out.println("Normal: " +
-                (solution.longestConsecutive(new int[]{100, 4, 200, 1, 3, 2}) == 4));
-            System.out.println("Empty: " +
-                (solution.longestConsecutive(new int[]{}) == 0));
-            System.out.println("Duplicates and negatives: " +
-                (solution.longestConsecutive(new int[]{-2, -1, -1, 0, 5}) == 3));
+    private static class Cases {
+        static int run(int... nums) {
+            return new LongestConsecutiveSequence().longestConsecutive(nums);
         }
     }
 
-    public static void main(String[] args) {
-        Test.run();
+    @Test
+    void normal() {
+        assertEquals(4, Cases.run(100, 4, 200, 1, 3, 2));
+    }
+
+    @Test
+    void empty() {
+        assertEquals(0, Cases.run());
+    }
+
+    @Test
+    void duplicatesAndNegatives() {
+        assertEquals(3, Cases.run(-2, -1, -1, 0, 5));
     }
 }

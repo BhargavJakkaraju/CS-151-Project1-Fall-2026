@@ -1,22 +1,12 @@
 package test;
 
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import org.junit.jupiter.api.Test;
 import add.AddTwo;
 import add.ListNode;
 
 public class AddTwoTest {
-    private static class Test {
-        static void run() {
-            AddTwo solution = new AddTwo();
-
-            // Min Myat Thu's tests
-            System.out.println("Normal: " + matches(
-                solution.addTwoNumbers(list(2, 4, 3), list(5, 6, 4)), 7, 0, 8));
-            System.out.println("Zeroes: " + matches(
-                solution.addTwoNumbers(list(0), list(0)), 0));
-            System.out.println("Extra carry: " + matches(
-                solution.addTwoNumbers(list(9, 9), list(1)), 0, 0, 1));
-        }
-
+    private static class Cases {
         static ListNode list(int... digits) {
             ListNode head = new ListNode(digits[0]);
             ListNode current = head;
@@ -36,7 +26,24 @@ public class AddTwoTest {
         }
     }
 
-    public static void main(String[] args) {
-        Test.run();
+    @Test
+    void normal() {
+        assertTrue(Cases.matches(
+            new AddTwo().addTwoNumbers(Cases.list(2, 4, 3), Cases.list(5, 6, 4)),
+            7, 0, 8));
+    }
+
+    @Test
+    void zeroes() {
+        assertTrue(Cases.matches(
+            new AddTwo().addTwoNumbers(Cases.list(0), Cases.list(0)),
+            0));
+    }
+
+    @Test
+    void extraCarry() {
+        assertTrue(Cases.matches(
+            new AddTwo().addTwoNumbers(Cases.list(9, 9), Cases.list(1)),
+            0, 0, 1));
     }
 }

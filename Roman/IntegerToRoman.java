@@ -1,6 +1,6 @@
 // import java.util.Scanner;
 
-class Solution {
+public class IntegerToRoman {
     
     /*
     My name: Bao Tran

@@ -46,4 +46,27 @@ public class AddTwoTest {
             new AddTwo().addTwoNumbers(Cases.list(9, 9), Cases.list(1)),
             0, 0, 1));
     }
+
+
+    // Bao Tran
+    @Test
+    void test1() {
+        assertTrue(Cases.matches(
+            new AddTwo().addTwoNumbers(Cases.list(1, 2, 3), Cases.list(4, 5, 6)),
+            5, 7, 9));
+    }
+
+    @Test
+    void test2() {
+        assertTrue(Cases.matches(
+            new AddTwo().addTwoNumbers(Cases.list(9, 9, 9), Cases.list(1)),
+            0, 0, 0, 1));
+    }
+
+    @Test
+    void test3() {
+        assertTrue(Cases.matches(
+            new AddTwo().addTwoNumbers(Cases.list(0), Cases.list(0)),
+            0));
+    }
 }

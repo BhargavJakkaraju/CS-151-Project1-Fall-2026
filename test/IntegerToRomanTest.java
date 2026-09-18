@@ -2,7 +2,7 @@ package test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import Roman.Solution;
+import Roman.IntegerToRoman;
 
 /*
 Tester: Sharif
@@ -19,7 +19,7 @@ public class IntegerToRomanTest {
 
         // Sharif
         static void run() {
-            Solution s = new Solution();
+            IntegerToRoman s = new IntegerToRoman();
 
             assertEquals("III", s.intToRoman(3));
             assertEquals("LVIII", s.intToRoman(58));

@@ -38,7 +38,7 @@ public class IntegerToRomanTest {
             //test 2 - testing for negative numbers
             assertEquals("", s.intToRoman(-3));
 
-            //tests 3-5 = testing for camel cases 32, 10, and 450
+            //tests 3-5 = testing for happy path cases 32, 10, and 450
             assertEquals("XXXII", s.intToRoman(32));
             assertEquals("X", s.intToRoman(10));
             assertEquals("CDL", s.intToRoman(450));

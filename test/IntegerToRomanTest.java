@@ -29,6 +29,19 @@ public class IntegerToRomanTest {
             assertEquals("IV", s.intToRoman(4));
             assertEquals("IX", s.intToRoman(9));
             assertEquals("M", s.intToRoman(1000));
+
+            //rayna tests
+
+            //test 1 - testing for 0
+            assertEquals("", s.intToRoman(0));
+
+            //test 2 - testing for negative numbers
+            assertEquals("", s.intToRoman(-3));
+
+            //tests 3-5 = testing for camel cases 32, 10, and 450
+            assertEquals("XXXII", s.intToRoman(32));
+            assertEquals("X", s.intToRoman(10));
+            assertEquals("CDL", s.intToRoman(450));
         }
     }
 }

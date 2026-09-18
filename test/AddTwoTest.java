@@ -69,4 +69,18 @@ public class AddTwoTest {
             new AddTwo().addTwoNumbers(Cases.list(0), Cases.list(0)),
             0));
     }
+
+    @Test 
+    void test4() {
+        assertTrue(Cases.matches(
+            new AddTwo().addTwoNumbers(Cases.list(5, 6, 7), Cases.list(5, 6, 7)),
+            0, 3, 5, 1));
+    }
+
+    @Test
+    void test5() {
+        assertTrue(Cases.matches(
+            new AddTwo().addTwoNumbers(Cases.list(1, 2, 3, 4), Cases.list(5, 6, 7)),
+            6, 8, 0, 5));
+    }
 }

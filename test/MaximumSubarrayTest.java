@@ -35,8 +35,8 @@ public class MaximumSubarrayTest {
     } 
 
 
-    // Bao Tran
-    @org.junit.jupiter.api.Test
+        // Bao Tran
+        @org.junit.jupiter.api.Test
         void test1() {
             int[] nums = {5, -2, 3, -1, 2, -6, 4};
             int res = new MaximumSubarray().maxSubArray(nums);
@@ -56,5 +56,20 @@ public class MaximumSubarrayTest {
             int res = new MaximumSubarray().maxSubArray(nums);
             assertEquals(15, res);
         }
+
+        @org.junit.jupiter.api.Test
+        void test4() {
+            int[] nums = {0, 0, 0, 0};
+            int res = new MaximumSubarray().maxSubArray(nums);
+            assertEquals(0, res);
+        }
+
+        @org.junit.jupiter.api.Test
+        void test5() {
+            int[] nums = {1, -1, 2, -2, 3, -3, 4, -4};
+            int res = new MaximumSubarray().maxSubArray(nums);
+            assertEquals(4, res);
+        }
+
     
 }
